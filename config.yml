@@ -1,5 +1,4 @@
 # Authentication token for the bot application:
-# If null, the "token" property of auth.json will be used.
 # REMEMBER: DON'T CHECK IN YOUR API TOKEN INTO PUBLIC SOURCE CONTROL!
 token: null
 
