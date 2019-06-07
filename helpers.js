@@ -12,12 +12,9 @@ module.exports.Commands = class {
     }
 
     add(command, handler) {
-        this.commands[command.name] = handler;
-        if (command.aliases) {
-            for (const alias of command.aliases) {
-                this.commands[alias] = handler;
-            }
-        }
+        [command.name, ...command.aliases || []].map((cmd) => {
+            this.commands[cmd] = handler;
+        });
     }
 
     exists(command) {
@@ -41,11 +38,10 @@ module.exports.messageHandler = function(commands, message) {
 };
 
 module.exports.login = function(client) {
-    if (process.env.DISCORD_API_TOKEN) {
-        client.login(process.env.DISCORD_API_TOKEN);
-    } else if (config.token) {
-        client.login(client.token);
+    const token = process.env.DISCORD_API_TOKEN || config.token;
+    if (token) {
+        client.login(token);
     } else {
-        console.log('No token provided in config.yml or auth.json');
+        console.log('No token provided in environment variables or config.yml');
     }
 };
