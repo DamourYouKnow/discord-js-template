@@ -9,7 +9,7 @@ client.on('ready', () => {
 
 const commands = new helpers.Commands();
 
-// Add some commands command.
+// Add your commands here...
 commands.add({name: 'ping'}, (message) => {
     message.channel.send('pong!');
 });
