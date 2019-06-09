@@ -1,6 +1,6 @@
 # Discord bot template
 
-This repository contains boilerplate code for creating Discord bot. This 
+This repository contains boilerplate code for creating a Discord bot. This 
 boilerplate contains a pattern used to define commands, aliases, and 
 command arguments.
 
