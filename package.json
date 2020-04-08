@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/DamourYouKnow/damour-bot-template#readme",
   "dependencies": {
-    "discord.js": "^11.5.1",
+    "discord.js": "^11.6.4",
     "js-yaml": "^3.13.1"
   },
   "devDependencies": {
